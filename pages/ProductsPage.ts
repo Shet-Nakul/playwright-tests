@@ -74,6 +74,7 @@ export class ProductsPage extends BasePage {
 
   /** Return the row locator that contains the given SKU. */
   rowBySku(sku: string): Locator {
+    console.log(`Finding row with SKU: ${sku}`)
     return this.rows.filter({ has: this.page.getByTestId('product-sku').filter({ hasText: sku }) })
   }
 

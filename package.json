@@ -1,0 +1,25 @@
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "description": "Playwright UI automation framework (Page Object Model) for the StockPilot inventory app.",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen http://localhost:5173",
+    "install:browsers": "playwright install"
+  },
+  "keywords": ["playwright", "automation", "pom", "typescript"],
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.5.5",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.5.4"
+  }
+}

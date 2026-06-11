@@ -15,7 +15,7 @@ export class LoginPage extends BasePage {
 
   constructor(page: Page) {
     super(page)
-    this.usernameInput = page.getByTestId('login-username')
+    this.usernameInput = page.getByTestId('login-')
     this.passwordInput = page.getByTestId('login-password')
     this.submitButton = page.getByTestId('login-submit')
     this.errorMessage = page.getByTestId('login-error')

@@ -12,7 +12,7 @@ export class AddProductPage extends BasePage {
   readonly categorySelect: Locator
   readonly supplierSelect: Locator
   readonly quantityInput: Locator
-  readonly priceInput: Locator
+  readonly moneyInput: Locator
   readonly descriptionInput: Locator
   readonly notifyYes: Locator
   readonly notifyNo: Locator
@@ -29,7 +29,7 @@ export class AddProductPage extends BasePage {
     this.categorySelect = page.getByTestId('select-category')
     this.supplierSelect = page.getByTestId('select-supplier')
     this.quantityInput = page.getByTestId('input-quantity')
-    this.priceInput = page.getByTestId('input-price')
+    this.moneyInput = page.getByTestId('input-price')
     this.descriptionInput = page.getByTestId('input-description')
     this.notifyYes = page.getByTestId('radio-notify-yes')
     this.notifyNo = page.getByTestId('radio-notify-no')

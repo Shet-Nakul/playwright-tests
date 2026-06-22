@@ -36,7 +36,7 @@ export class AddProductPage extends BasePage {
     this.termsCheckbox = page.getByTestId('checkbox-terms')
     this.submitButton = page.getByTestId('submit-product')
     this.resetButton = page.getByTestId('reset-form')
-    this.successAlert = page.getByTestId('form-')
+    this.successAlert = page.getByTestId('form-success')
   }
 
   async open(): Promise<void> {

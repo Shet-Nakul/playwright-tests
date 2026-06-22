@@ -11,7 +11,7 @@ export class NavigationComponent extends BasePage {
   readonly logoutButton: Locator
 
   private readonly navTestIds: Record<string, string> = {
-    dashboard: 'nav-',
+    dashboard: 'nav-dashboard',
     products: 'nav-products',
     addProduct: 'nav-add-product',
     suppliers: 'nav-suppliers',

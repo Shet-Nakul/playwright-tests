@@ -36,7 +36,7 @@ export class AddProductPage extends BasePage {
     this.termsCheckbox = page.getByTestId('checkbox-terms')
     this.submitButton = page.getByTestId('submit-product')
     this.resetButton = page.getByTestId('reset-form')
-    this.successAlert = page.getByTestId('form-success')
+    this.successAlert = page.getByTestId('form-')
   }
 
   async open(): Promise<void> {
@@ -45,7 +45,7 @@ export class AddProductPage extends BasePage {
 
   /** Fill the form with the supplied product data. Empty fields are skipped. */
   async fillForm(product: NewProduct): Promise<void> {
-   
+    if (product.name) await this.nameInput.fill(product.name)
     if (product.sku) await this.skuInput.fill(product.sku)
     if (product.category) await this.categorySelect.selectOption(product.category)
     if (product.supplier) await this.supplierSelect.selectOption(product.supplier)

@@ -50,7 +50,7 @@ export class AddProductPage extends BasePage {
     if (product.category) await this.categorySelect.selectOption(product.category)
     if (product.supplier) await this.supplierSelect.selectOption(product.supplier)
     await this.quantityInput.fill(String(product.quantity))
-    await this.priceInput.fill(String(product.price))
+    await this.moneyInput.fill(String(product.price))
     if (product.description) await this.descriptionInput.fill(product.description)
     if (product.notify) await this.notifyYes.check()
     else await this.notifyNo.check()
@@ -61,6 +61,7 @@ export class AddProductPage extends BasePage {
   }
 
   async submit(): Promise<void> {
+    console.log('Submitting product form with name:', await this.nameInput.inputValue())
     await this.submitButton.click()
   }
 

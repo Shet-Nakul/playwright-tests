@@ -60,6 +60,6 @@ export default defineConfig({
     command: 'npm run dev --prefix ../inventory-app',
     url: BASE_URL,
     timeout: 120 * 1000,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: true,
   },
 })

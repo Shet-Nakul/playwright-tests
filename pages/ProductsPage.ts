@@ -93,6 +93,7 @@ export class ProductsPage extends BasePage {
   }
 
   async nextPage(): Promise<void> {
+     await this.nextButton.click()
     await this.nextButton.click()
   }
 

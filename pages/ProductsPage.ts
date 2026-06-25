@@ -97,6 +97,7 @@ export class ProductsPage extends BasePage {
   }
 
   async prevPage(): Promise<void> {
+    console.log("prevPage");
     await this.prevButton.click()
   }
 

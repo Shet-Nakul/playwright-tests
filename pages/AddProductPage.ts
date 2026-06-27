@@ -35,8 +35,8 @@ export class AddProductPage extends BasePage {
     this.notifyNo = page.getByTestId('radio-notify-no')
     this.termsCheckbox = page.getByTestId('checkbox-terms')
     this.submitButton = page.getByTestId('submit-product')
-    this.resetButton = page.getByTestId('reset-form')
-    this.successAlert = page.getByTestId('form-success')
+    this.resetButton = page.getByTestId('reset')
+    this.successAlert = page.getByTestId('form')
   }
 
   async open(): Promise<void> {
@@ -76,6 +76,7 @@ export class AddProductPage extends BasePage {
 
   /** Submit a fully valid product end-to-end. */
   async createProduct(product: NewProduct): Promise<void> {
+    console.log("Something wrong with this test case");
     await this.fillForm(product)
     await this.acceptTerms()
     await this.submit()

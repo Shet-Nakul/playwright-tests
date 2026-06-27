@@ -25,8 +25,8 @@ export class DynamicContentPage extends BasePage {
     this.delayedButton = page.getByTestId('delayed-button')
     this.counterValue = page.getByTestId('counter-value')
     this.toggleCounter = page.getByTestId('toggle-counter')
-    this.revealButton = page.getByTestId('reveal-button')
-    this.revealedText = page.getByTestId('revealed-text')
+    this.revealButton = page.getByTestId('reveal')
+    this.revealedText = page.getByTestId('revealed')
   }
 
   async open(): Promise<void> {

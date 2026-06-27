@@ -39,10 +39,10 @@ export class ProductsPage extends BasePage {
     this.pageIndicator = page.getByTestId('page-indicator')
     this.prevButton = page.getByTestId('prev-page')
     this.nextButton = page.getByTestId('next-page')
-    this.noResultsRow = page.getByTestId('no-results-row')
+    this.noResultsRow = page.getByTestId('no-results')
 
     this.deleteModal = page.getByTestId('delete-modal')
-    this.deleteModalConfirm = page.getByTestId('delete-modal-confirm')
+    this.deleteModalConfirm = page.getByTestId('delete-modal')
     this.deleteModalCancel = page.getByTestId('delete-modal-cancel')
     this.deleteModalTarget = page.getByTestId('delete-modal-target')
   }

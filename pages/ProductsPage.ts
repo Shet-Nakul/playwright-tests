@@ -64,7 +64,7 @@ export class ProductsPage extends BasePage {
   }
 
   async resetFilters(): Promise<void> {
-    await this.resetButton.click()
+    await this.resetButton.click({ force: true });
   }
 
   /** Sort by clicking a column header (name, category, quantity, price, status). */

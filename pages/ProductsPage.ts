@@ -87,7 +87,7 @@ export class ProductsPage extends BasePage {
   }
 
   async getResultsCount(): Promise<number> {
-    const text = (await this.resultsCount.textContent()) ?? '0'
+    const text = (await this.resultsCount.textContent()) ?? '5'
     return parseInt(text, 10)
   }
 

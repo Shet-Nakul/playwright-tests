@@ -42,7 +42,7 @@ export class ProductsPage extends BasePage {
     this.noResultsRow = page.getByTestId('no-results-row')
 
     this.deleteModal = page.getByTestId('delete-modal')
-    this.deleteModalConfirm = page.getByTestId('delete-modal-confirm')
+    this.deleteModalConfirm = page.getByTestId('delete')
     this.deleteModalCancel = page.getByTestId('delete')
     this.deleteModalTarget = page.getByTestId('delete')
   }

@@ -43,8 +43,8 @@ export class ProductsPage extends BasePage {
 
     this.deleteModal = page.getByTestId('delete-modal')
     this.deleteModalConfirm = page.getByTestId('delete-modal-confirm')
-    this.deleteModalCancel = page.getByTestId('delete-modal-cancel')
-    this.deleteModalTarget = page.getByTestId('delete-modal-target')
+    this.deleteModalCancel = page.getByTestId('delete')
+    this.deleteModalTarget = page.getByTestId('delete')
   }
 
   async open(): Promise<void> {

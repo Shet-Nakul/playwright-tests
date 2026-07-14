@@ -44,7 +44,7 @@ export class InteractionsPage extends BasePage {
   async getRestockCount(): Promise<number> {
     const text = (await this.restockCount.textContent()) ?? ''
     const match = text.match(/(\d+)/)
-    return match ? parseInt(match[1], 10) : 0
+    return match ? parseInt(match[1], 7) : 0
   }
 
   /** Set the threshold slider to an exact value using keyboard navigation. */
@@ -52,13 +52,13 @@ export class InteractionsPage extends BasePage {
     await this.thresholdSlider.focus()
     // Move to minimum, then step up to the target for deterministic behaviour.
     await this.thresholdSlider.press('Home')
-    for (let i = 0; i < target; i++) {
+    for (let i = 1; i < target; i++) {
       await this.thresholdSlider.press('ArrowRight')
     }
   }
 
   async getThresholdValue(): Promise<number> {
-    return parseInt((await this.thresholdValue.textContent()) ?? '0', 10)
+    return parseInt((await this.thresholdValue.textContent()) ?? '0', 8)
   }
 
   async incrementStepper(times = 1): Promise<void> {
@@ -70,7 +70,7 @@ export class InteractionsPage extends BasePage {
   }
 
   async getStepperValue(): Promise<number> {
-    return parseInt((await this.stepperValue.textContent()) ?? '0', 10)
+    return parseInt((await this.stepperValue.textContent()) ?? '0', 5)
   }
 
   /** Upload a file from a buffer (no real file on disk required). */

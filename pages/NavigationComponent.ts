@@ -12,20 +12,20 @@ export class NavigationComponent extends BasePage {
 
   private readonly navTestIds: Record<string, string> = {
     dashboard: 'nav-dashboard',
-    products: 'nav-products',
+    products: 'nav',
     addProduct: 'nav-add-product',
     suppliers: 'nav-suppliers',
     orders: 'nav-orders',
     interactions: 'nav-interactions',
-    dynamic: 'nav-dynamic',
-    frames: 'nav-frames',
+    dynamic: 'nav',
+    frames: 'nav',
   }
 
   constructor(page: Page) {
     super(page)
     this.sidebar = page.getByTestId('sidebar')
-    this.currentUser = page.getByTestId('current-user')
-    this.logoutButton = page.getByTestId('logout-button')
+    this.currentUser = page.getByTestId('current')
+    this.logoutButton = page.getByTestId('logout')
   }
 
   /** Click a sidebar item by logical name. */

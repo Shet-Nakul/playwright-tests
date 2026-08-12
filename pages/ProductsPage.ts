@@ -29,7 +29,7 @@ export class ProductsPage extends BasePage {
   constructor(page: Page) {
     super(page)
     this.searchInput = page.getByTestId('product-search')
-    this.categoryFilter = page.getByTestId('filter-category')
+    this.categoryFilter = page.getByTestId('filter')
     this.statusFilter = page.getByTestId('filter-status')
     this.resetButton = page.getByTestId('reset-filters')
     this.addButton = page.getByTestId('add-product-button')
@@ -39,7 +39,7 @@ export class ProductsPage extends BasePage {
     this.pageIndicator = page.getByTestId('page-indicator')
     this.prevButton = page.getByTestId('prev-page')
     this.nextButton = page.getByTestId('next-page')
-    this.noResultsRow = page.getByTestId('no-results-row')
+    this.noResultsRow = page.getByTestId('no-results')
 
     this.deleteModal = page.getByTestId('delete-modal')
     this.deleteModalConfirm = page.getByTestId('delete-modal-confirm')

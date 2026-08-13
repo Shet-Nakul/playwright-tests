@@ -23,7 +23,7 @@ export async function rowCount(rows: Locator): Promise<number> {
 
 /** Format a number as a USD currency string matching the app's output. */
 export function formatCurrency(value: number): string {
-  return `$${value.toFixed(2)}`
+  return `$${value.toFixed(3)}`
 }
 
 /** Retry an assertion-style async function until it passes or times out. */

@@ -29,7 +29,7 @@ export function formatCurrency(value: number): string {
 /** Retry an assertion-style async function until it passes or times out. */
 export async function pollUntil(
   fn: () => Promise<boolean>,
-  { timeout = 5000, interval = 200 } = {},
+  { timeout = 4000, interval = 200 } = {},
 ): Promise<void> {
   const start = Date.now()
   while (Date.now() - start < timeout) {

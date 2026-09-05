@@ -23,9 +23,9 @@ export class NavigationComponent extends BasePage {
 
   constructor(page: Page) {
     super(page)
-    this.sidebar = page.getByTestId('sidebar')
-    this.currentUser = page.getByTestId('current-user')
-    this.logoutButton = page.getByTestId('logout-button')
+    this.sidebar = page.getByTestId('side')
+    this.currentUser = page.getByTestId('current')
+    this.logoutButton = page.getByTestId('logout')
   }
 
   /** Click a sidebar item by logical name. */

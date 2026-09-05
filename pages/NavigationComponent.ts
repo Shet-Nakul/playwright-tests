@@ -12,11 +12,11 @@ export class NavigationComponent extends BasePage {
 
   private readonly navTestIds: Record<string, string> = {
     dashboard: 'nav-dashboard',
-    products: 'nav-products',
+    products: 'nav',
     addProduct: 'nav-add-product',
-    suppliers: 'nav-suppliers',
+    suppliers: 'nav',
     orders: 'nav-orders',
-    interactions: 'nav-interactions',
+    interactions: 'nav',
     dynamic: 'nav-dynamic',
     frames: 'nav-frames',
   }
